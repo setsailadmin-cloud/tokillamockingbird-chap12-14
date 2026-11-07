@@ -1,0 +1,1253 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full bg-stone-100">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SetSail Novel Course: To Kill a Mockingbird (Chapters 12–14)</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Inter:wght@300;400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Newsreader', 'Georgia', 'serif'],
+                        display: ['Cinzel', 'serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#fdf8f3',
+                            100: '#f9eee2',
+                            200: '#f2dcbf',
+                            500: '#c27803',
+                            600: '#9e5902',
+                            800: '#633503',
+                            900: '#381c00'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f1ede8;
+            border-radius: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #d4cac0;
+            border-radius: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #a89c90;
+        }
+    </style>
+</head>
+<body class="min-h-full flex flex-col text-stone-800 font-sans antialiased selection:bg-amber-200 selection:text-amber-900 bg-stone-100">
+
+    <!-- Top Sticky Header -->
+    <header class="bg-stone-900 text-stone-100 border-b border-stone-800 sticky top-0 z-40 shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Brand & Course Title -->
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-amber-600 to-amber-400 text-stone-950 flex items-center justify-center font-extrabold text-lg font-display shadow-md">
+                        SS
+                    </div>
+                    <div>
+                        <span class="text-[11px] uppercase tracking-widest text-amber-400 font-semibold block">SetSail Novel Course</span>
+                        <h1 class="text-base sm:text-lg font-serif font-bold text-stone-100 flex items-center gap-2">
+                            <span>To Kill a Mockingbird</span>
+                            <span class="text-[11px] font-sans font-medium px-2 py-0.5 rounded-full bg-stone-800 text-amber-300 border border-stone-700">Chapters 12–14</span>
+                        </h1>
+                    </div>
+                </div>
+
+                <!-- Novel Reference Quick Action -->
+                <div class="flex items-center space-x-2">
+                    <button onclick="openScreenshareModal()" class="px-3.5 py-1.5 rounded-lg text-xs font-medium bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 border border-amber-500/40 transition flex items-center gap-1.5 shadow-sm">
+                        <i class="fa-solid fa-desktop"></i>
+                        <span class="hidden sm:inline">Screenshare Novel Helper</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main App Container -->
+    <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col gap-6">
+
+        <!-- Navigation Tabs Bar -->
+        <nav class="flex space-x-2 w-full overflow-x-auto p-1 bg-stone-200/80 rounded-2xl border border-stone-300/80 custom-scrollbar shadow-inner" aria-label="Tabs">
+            <button id="tab-nav-review" onclick="switchMainTab('review')" class="tab-nav-btn active px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition flex items-center gap-2 whitespace-nowrap bg-amber-600 text-white shadow-sm">
+                <i class="fa-solid fa-pen-clip"></i>
+                <span>Homework Review</span>
+                <span class="ml-1 text-[11px] bg-amber-700/80 px-2 py-0.5 rounded-full text-white font-mono">12 Sentences</span>
+            </button>
+            <button id="tab-nav-closereading" onclick="switchMainTab('closereading')" class="tab-nav-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition flex items-center gap-2 whitespace-nowrap text-stone-600 hover:text-stone-900 hover:bg-stone-300/60">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <span>Close Reading (Ch. 12–14)</span>
+                <span class="ml-1 text-[11px] bg-stone-300 px-2 py-0.5 rounded-full text-stone-700 font-mono">9</span>
+            </button>
+            <button id="tab-nav-literary" onclick="switchMainTab('literary')" class="tab-nav-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition flex items-center gap-2 whitespace-nowrap text-stone-600 hover:text-stone-900 hover:bg-stone-300/60">
+                <i class="fa-solid fa-feather-pointed"></i>
+                <span>Literary Devices & Craft</span>
+            </button>
+            <button id="tab-nav-writing" onclick="switchMainTab('writing')" class="tab-nav-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition flex items-center gap-2 whitespace-nowrap text-stone-600 hover:text-stone-900 hover:bg-stone-300/60">
+                <i class="fa-solid fa-comments text-amber-700"></i>
+                <span>Prompt Discussion & Ideas</span>
+            </button>
+            <button id="tab-nav-preview" onclick="switchMainTab('preview')" class="tab-nav-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition flex items-center gap-2 whitespace-nowrap text-stone-600 hover:text-stone-900 hover:bg-stone-300/60">
+                <i class="fa-solid fa-compass"></i>
+                <span>Next Lesson Preview (Ch. 15–17)</span>
+                <span class="ml-1 text-[11px] bg-stone-300 px-2 py-0.5 rounded-full text-stone-700 font-mono">12</span>
+            </button>
+        </nav>
+
+        <!-- ==================== TAB 1: HOMEWORK REVIEW ==================== -->
+        <section id="tab-panel-review" class="tab-panel space-y-6">
+            <!-- Review Header Banner -->
+            <div class="bg-gradient-to-r from-stone-900 via-stone-800 to-amber-950 text-white p-6 rounded-2xl shadow-sm border border-stone-800 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                <div>
+                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-amber-500/20 text-amber-300 border border-amber-500/30 mb-2">
+                        <i class="fa-solid fa-book-open mr-1.5"></i> Novel Context Mastery
+                    </span>
+                    <h2 class="text-2xl font-serif font-bold text-white">Chapters 12–14 Sentence Fill-in Challenge</h2>
+                    <p class="text-sm text-stone-300 mt-1 max-w-xl">
+                        Complete all 12 sentences from Chapters 12–14. Select the target vocabulary word from your homework list that best completes the author's original sentence.
+                    </p>
+                </div>
+                <!-- Interactive Score & Progress Widget -->
+                <div class="flex items-center gap-4 bg-stone-950/80 px-4 py-3 rounded-xl border border-stone-700/80 text-xs shadow-inner">
+                    <div>
+                        <span class="text-stone-400 block text-[10px] uppercase font-bold tracking-wider">Completed</span>
+                        <span id="fillin-progress-display" class="font-bold text-white text-base">0 / 12</span>
+                    </div>
+                    <div class="h-8 w-px bg-stone-700"></div>
+                    <div>
+                        <span class="text-stone-400 block text-[10px] uppercase font-bold tracking-wider">Score</span>
+                        <span id="fillin-score-display" class="font-bold text-amber-400 text-base">0 / 12</span>
+                    </div>
+                    <button onclick="resetSentenceChallenge()" class="ml-2 px-3 py-1.5 bg-amber-600 hover:bg-amber-500 text-white font-semibold text-xs rounded-lg transition flex items-center gap-1 shadow">
+                        <i class="fa-solid fa-rotate-right"></i> Reset
+                    </button>
+                </div>
+            </div>
+
+            <!-- Scrollable 12 Question Cards Container -->
+            <div id="sentence-cards-container" class="space-y-6">
+                <!-- Dynamically generated all 12 cards on one page -->
+            </div>
+        </section>
+
+        <!-- ==================== TAB 2: CLOSE READING ==================== -->
+        <section id="tab-panel-closereading" class="tab-panel hidden space-y-6">
+            <!-- Header Banner -->
+            <div class="bg-gradient-to-r from-stone-900 via-stone-800 to-indigo-950 text-white p-6 rounded-2xl shadow-sm border border-stone-800 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                <div>
+                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 mb-2">
+                        <i class="fa-solid fa-graduation-cap mr-1.5"></i> Teaching Reference Alignment
+                    </span>
+                    <h2 class="text-2xl font-serif font-bold text-white">Chapters 12–14 Close Reading</h2>
+                    <p class="text-sm text-stone-300 mt-1 max-w-xl">
+                        9 core discussion questions referencing the teacher study guide. Explore First Purchase Church, Calpurnia's double life, Aunt Alexandra's arrival, and Jem breaking the childhood code.
+                    </p>
+                </div>
+                <!-- Action Toolbar -->
+                <div class="flex flex-wrap items-center gap-2">
+                    <button onclick="openScreenshareModal()" class="px-3.5 py-2 rounded-xl text-xs font-semibold bg-indigo-600 hover:bg-indigo-500 text-white transition flex items-center gap-2 shadow">
+                        <i class="fa-solid fa-display"></i>
+                        <span>Screenshare the novel if needed</span>
+                    </button>
+                    <!-- Chapter Filter -->
+                    <div class="bg-stone-950/80 p-1 rounded-xl border border-stone-700 flex items-center space-x-1">
+                        <button id="cr-filter-btn-all" onclick="filterCloseReading('all')" class="px-3 py-1.5 text-xs font-semibold rounded-lg bg-amber-600 text-white transition">All (9)</button>
+                        <button id="cr-filter-btn-12" onclick="filterCloseReading(12)" class="px-3 py-1.5 text-xs font-semibold rounded-lg text-stone-300 hover:text-white hover:bg-stone-800 transition">Ch. 12 (4)</button>
+                        <button id="cr-filter-btn-13" onclick="filterCloseReading(13)" class="px-3 py-1.5 text-xs font-semibold rounded-lg text-stone-300 hover:text-white hover:bg-stone-800 transition">Ch. 13 (2)</button>
+                        <button id="cr-filter-btn-14" onclick="filterCloseReading(14)" class="px-3 py-1.5 text-xs font-semibold rounded-lg text-stone-300 hover:text-white hover:bg-stone-800 transition">Ch. 14 (3)</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Close Reading Cards List -->
+            <div id="close-reading-cards-list" class="space-y-6">
+                <!-- Dynamically rendered 9 Close Reading questions -->
+            </div>
+        </section>
+
+        <!-- ==================== TAB 3: LITERARY DEVICES & CRAFT ==================== -->
+        <section id="tab-panel-literary" class="tab-panel hidden space-y-6">
+            <div class="bg-gradient-to-r from-stone-900 via-indigo-950 to-stone-900 text-white p-6 rounded-2xl shadow-sm border border-stone-800">
+                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-amber-500/20 text-amber-300 border border-amber-500/30 mb-2">
+                    <i class="fa-solid fa-feather-pointed mr-1.5"></i> Literary Analysis & Craft
+                </span>
+                <h2 class="text-2xl font-serif font-bold text-white">Major Literary Methods in Chapters 12–14</h2>
+                <p class="text-sm text-stone-300 mt-1 max-w-2xl">
+                    Examine how Harper Lee employs code-switching, metaphoric confinement, moral rites of passage, and social satire to expose Maycomb's social hierarchy.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="literary-devices-grid">
+                <!-- Dynamically rendered literary devices -->
+            </div>
+        </section>
+
+        <!-- ==================== TAB 4: PROMPT DISCUSSION & IDEAS ==================== -->
+        <section id="tab-panel-writing" class="tab-panel hidden space-y-6">
+            <div class="bg-gradient-to-r from-amber-950 via-stone-900 to-stone-950 text-white p-6 rounded-2xl shadow-sm border border-stone-800">
+                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-amber-500/20 text-amber-300 border border-amber-500/30 mb-2">
+                    <i class="fa-solid fa-comments mr-1.5"></i> In-Class Discussion & Writing Prep
+                </span>
+                <h2 class="text-2xl font-serif font-bold text-white">Chapters 12–14 Prompt Discussion & Ideas</h2>
+                <p class="text-sm text-stone-300 mt-1 max-w-2xl">
+                    Students will not write the essay in class. Instead, examine the 3 discussion angles below to brainstorm insights and take notes for the 150–300 word homework assignment.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <!-- Left Column: Assignment Details & Notepad -->
+                <div class="lg:col-span-1 space-y-4">
+                    <!-- Assignment Card -->
+                    <div class="bg-white p-5 rounded-2xl border border-stone-200 shadow-sm space-y-3">
+                        <h3 class="font-serif font-bold text-stone-900 text-sm flex items-center gap-2">
+                            <i class="fa-solid fa-bullseye text-amber-600"></i>
+                            <span>Homework Writing Prompt</span>
+                        </h3>
+                        <p class="text-xs text-stone-700 leading-relaxed font-serif italic border-l-2 border-amber-500 pl-3 py-1 bg-amber-50/50 rounded-r-lg">
+                            "In Chapters 12–14, both Jem and Scout confront the complexities of the adult world. Analyze how Harper Lee uses <strong>either Calpurnia's double life</strong> or <strong>Jem's decision to tell Atticus about Dill</strong> to illustrate the difficult transition from childhood innocence to mature understanding. (150–300 words)"
+                        </p>
+                    </div>
+
+                    <!-- Criteria Card -->
+                    <div class="bg-white p-5 rounded-2xl border border-stone-200 shadow-sm space-y-2">
+                        <h4 class="font-semibold text-stone-800 text-xs uppercase tracking-wider text-stone-500">Writing Criteria:</h4>
+                        <ul class="text-xs text-stone-600 space-y-1.5 list-disc pl-4 font-medium">
+                            <li><strong>Length:</strong> 150 to 300 words.</li>
+                            <li><strong>Clear Thesis:</strong> State the transition from innocence to maturity clearly.</li>
+                            <li><strong>Textual Evidence:</strong> Integrate at least one direct quote from Chapter 12 or 14.</li>
+                            <li><strong>Depth:</strong> Analyze the moral consequences of the chosen character's actions.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Discussion Scratchpad -->
+                    <div class="bg-white p-5 rounded-2xl border border-stone-200 shadow-sm space-y-3">
+                        <div class="flex items-center justify-between">
+                            <h4 class="font-serif font-bold text-stone-900 text-xs uppercase tracking-wider text-stone-700 flex items-center gap-1.5">
+                                <i class="fa-solid fa-pen-to-square text-amber-600"></i> Class Discussion Notepad
+                            </h4>
+                            <span class="text-[10px] text-stone-400">Auto-saves locally</span>
+                        </div>
+                        <textarea id="discussion-scratchpad" oninput="saveScratchpad(this.value)" rows="6" placeholder="Jot down bullet points, key quotes, or classroom ideas for your essay..." class="w-full p-3 text-xs bg-stone-50 border border-stone-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-amber-500 focus:outline-none transition font-sans text-stone-800 leading-relaxed"></textarea>
+                        <div class="flex items-center justify-between text-[11px] text-stone-500">
+                            <span id="scratchpad-status"><i class="fa-solid fa-check text-emerald-600 mr-1"></i> Saved locally</span>
+                            <span id="scratchpad-count" class="font-semibold text-stone-700">0 words</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: 3 Guided Discussion Areas & Model Paragraph -->
+                <div class="lg:col-span-2 space-y-4">
+                    <div class="bg-white p-6 rounded-2xl border border-stone-200 shadow-sm space-y-5">
+                        <div class="border-b border-stone-100 pb-3 flex items-center justify-between">
+                            <h3 class="font-serif font-bold text-stone-900 text-base sm:text-lg flex items-center gap-2">
+                                <i class="fa-solid fa-comments text-amber-600"></i>
+                                <span>3 Key Thematic Angles for In-Class Discussion</span>
+                            </h3>
+                            <span class="text-xs bg-amber-100 text-amber-800 font-semibold px-2 py-0.5 rounded-full border border-amber-200">Discussion Guide</span>
+                        </div>
+
+                        <!-- Discussion Angle 1: Calpurnia's Double Life -->
+                        <div class="p-4 rounded-xl bg-stone-50 border border-stone-200 space-y-2">
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs font-bold uppercase tracking-wider text-amber-800 bg-amber-100 px-2.5 py-0.5 rounded-full border border-amber-200">Angle 1</span>
+                                <span class="text-xs font-serif font-bold text-stone-700">Chapter 12</span>
+                            </div>
+                            <h4 class="font-serif font-bold text-stone-900 text-base">Calpurnia's "Modest Double Life" & First Purchase Church</h4>
+                            <p class="text-xs text-stone-600 leading-relaxed">
+                                <strong>Core Insight:</strong> Scout realizes Calpurnia is not merely a domestic fixture of the Finch household, but a multifaceted individual with her own heritage, literacy, and community authority.
+                            </p>
+                            <div class="bg-white p-3 rounded-lg border border-stone-200 text-xs space-y-1">
+                                <span class="font-semibold text-amber-700 block text-[11px] uppercase tracking-wide"><i class="fa-solid fa-lightbulb mr-1"></i> Discussion Talking Points:</span>
+                                <ul class="list-disc pl-4 space-y-1 text-stone-600">
+                                    <li>Why does Calpurnia alter her speech when speaking to her congregation? What does she mean by "it's not necessary to tell all you know"?</li>
+                                    <li>How does the community rally together to collect ten dollars for Helen Robinson?</li>
+                                    <li>How does this visit expand Scout's worldview beyond Maycomb's segregated boundaries?</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Discussion Angle 2: The Pink Cotton Penitentiary -->
+                        <div class="p-4 rounded-xl bg-stone-50 border border-stone-200 space-y-2">
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs font-bold uppercase tracking-wider text-amber-800 bg-amber-100 px-2.5 py-0.5 rounded-full border border-amber-200">Angle 2</span>
+                                <span class="text-xs font-serif font-bold text-stone-700">Chapters 13 & 14</span>
+                            </div>
+                            <h4 class="font-serif font-bold text-stone-900 text-base">The "Pink Cotton Penitentiary" & Social Conformity</h4>
+                            <p class="text-xs text-stone-600 leading-relaxed">
+                                <strong>Core Insight:</strong> Aunt Alexandra arrives to impose rigid gender norms and Maycomb's aristocratic caste system on Scout, while Atticus steadfastly defends Calpurnia's place in their family.
+                            </p>
+                            <div class="bg-white p-3 rounded-lg border border-stone-200 text-xs space-y-1">
+                                <span class="font-semibold text-amber-700 block text-[11px] uppercase tracking-wide"><i class="fa-solid fa-lightbulb mr-1"></i> Discussion Talking Points:</span>
+                                <ul class="list-disc pl-4 space-y-1 text-stone-600">
+                                    <li>Why does Scout describe Aunt Alexandra's plans as the "walls of a pink cotton penitentiary"?</li>
+                                    <li>How does Jem expose the flaw in Alexandra's hereditary "streak" theory ("That makes the Ewells fine folks, then")?</li>
+                                    <li>Why does Atticus tell the children to "forget" his speech about gentle breeding when Scout begins to cry?</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Discussion Angle 3: Jem Breaking the Childhood Code -->
+                        <div class="p-4 rounded-xl bg-stone-50 border border-stone-200 space-y-2">
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs font-bold uppercase tracking-wider text-amber-800 bg-amber-100 px-2.5 py-0.5 rounded-full border border-amber-200">Angle 3</span>
+                                <span class="text-xs font-serif font-bold text-stone-700">Chapter 14</span>
+                            </div>
+                            <h4 class="font-serif font-bold text-stone-900 text-base">Jem Severing the Childhood Code & Dill's Isolation</h4>
+                            <p class="text-xs text-stone-600 leading-relaxed">
+                                <strong>Core Insight:</strong> When Dill runs away from home, Jem commits what Scout views as a treacherous betrayal by notifying Atticus—a crucial moment symbolizing his irreversible crossing into adult responsibility.
+                            </p>
+                            <div class="bg-white p-3 rounded-lg border border-stone-200 text-xs space-y-1">
+                                <span class="font-semibold text-amber-700 block text-[11px] uppercase tracking-wide"><i class="fa-solid fa-lightbulb mr-1"></i> Discussion Talking Points:</span>
+                                <ul class="list-disc pl-4 space-y-1 text-stone-600">
+                                    <li>Why does Scout believe Jem "broke the remaining code of our childhood"?</li>
+                                    <li>What does Jem's decision reveal about his understanding of adult concern and parental worry?</li>
+                                    <li>How does Dill's haunting observation—"maybe Boo Radley doesn't have anywhere to run off to"—reconnect childhood loneliness with Boo's reclusion?</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Exemplar Model Response Toggle -->
+                        <div class="pt-2 flex flex-col sm:flex-row items-center justify-between gap-3 border-t border-stone-100">
+                            <span class="text-xs font-semibold text-stone-600">
+                                <i class="fa-solid fa-star text-amber-500 mr-1"></i> Need a model for homework writing?
+                            </span>
+                            <button onclick="toggleModelResponse()" id="model-toggle-btn" class="px-4 py-2 bg-stone-900 hover:bg-stone-800 text-amber-300 text-xs font-bold rounded-xl transition flex items-center gap-2 shadow">
+                                <i class="fa-solid fa-eye"></i>
+                                <span id="model-btn-label">Show High-Scoring Model Paragraph</span>
+                            </button>
+                        </div>
+
+                        <!-- Model Response Box -->
+                        <div id="model-response-box" class="hidden p-5 rounded-xl bg-stone-900 text-stone-200 text-xs leading-relaxed space-y-2 border border-stone-800">
+                            <div class="flex items-center justify-between border-b border-stone-800 pb-2">
+                                <span class="font-bold text-amber-400 uppercase tracking-wider text-[11px] flex items-center gap-1.5">
+                                    <i class="fa-solid fa-certificate"></i> Exemplar Analytical Response (235 Words):
+                                </span>
+                                <span class="text-[10px] text-stone-400 font-mono">Theme: Jem Breaking the Childhood Code (Ch. 14)</span>
+                            </div>
+                            <p class="font-serif italic text-stone-300 leading-relaxed text-sm">
+                                In Chapter 14 of <em>To Kill a Mockingbird</em>, Harper Lee uses Jem's reaction to Dill's runaway appearance to dramatize the painful, irreversible transition from childhood loyalty to adult moral responsibility. When Scout and Jem discover Dill hiding beneath the bed after traveling three hundred miles from Meridian, Scout instinctively expects Jem to maintain childhood secrecy. Instead, Jem immediately summons Atticus, an act that Scout perceives as unpardonable treason: "Dill's eyes flickered at Jem, and Jem looked at the floor. Then he rose and broke the remaining code of our childhood." By turning to an adult, Jem knowingly sacrifices his peer solidarity and endures his sister's fierce resentment. However, his decision reflects an emergent maturity; he recognizes that Dill's frantic mother is suffering unbearable worry and that true protection requires adult intervention rather than childish escapism. While Scout remains bound within the simplistic childhood paradigm where confiding in adults constitutes betrayal, Jem operates from a broader ethical horizon centered on empathy, safety, and accountability. Through this decisive rift, Lee underscores that genuine maturity frequently demands the courage to make lonely, unpopular decisions that rupture familiar alliances in service of a higher, compassionate duty.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== TAB 5: NEXT LESSON PREVIEW ==================== -->
+        <section id="tab-panel-preview" class="tab-panel hidden space-y-6">
+            <div class="bg-gradient-to-r from-stone-900 via-indigo-950 to-stone-900 text-white p-6 rounded-2xl shadow-sm border border-stone-800 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                <div>
+                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 mb-2">
+                        <i class="fa-solid fa-rocket mr-1.5"></i> Sneak Peek
+                    </span>
+                    <h2 class="text-2xl font-serif font-bold text-white">Next Lesson Preview: Chapters 15–17 Vocabulary</h2>
+                    <p class="text-sm text-stone-300 mt-1 max-w-xl">
+                        Preview target vocabulary terms and test your deduction skills ahead of the courthouse confrontation, the lynch mob at Maycomb jail, and the opening testimony of Tom Robinson's trial.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Context Clues Warm-up Widget -->
+            <div class="bg-white p-6 rounded-2xl border border-stone-200 shadow-sm space-y-4">
+                <div class="flex items-center justify-between">
+                    <h3 class="font-serif font-bold text-stone-900 text-lg flex items-center gap-2">
+                        <i class="fa-solid fa-brain text-amber-600"></i>
+                        <span>Context Clues Warm-Up Challenge</span>
+                    </h3>
+                    <span class="text-xs bg-amber-100 text-amber-800 font-semibold px-2.5 py-1 rounded-full border border-amber-200">Interactive</span>
+                </div>
+                <p class="text-xs text-stone-600">Read the novel excerpt below. Try to deduce the missing vocabulary word from Chapters 15–17 before revealing the answer!</p>
+                
+                <div id="preview-clues-box" class="bg-stone-50 p-5 rounded-xl border border-stone-200 space-y-3">
+                    <!-- Dynamic Context Clue challenge -->
+                </div>
+            </div>
+
+            <!-- Upcoming Words Cards Grid -->
+            <div>
+                <h3 class="font-serif font-bold text-stone-900 text-lg mb-4 flex items-center gap-2">
+                    <i class="fa-solid fa-book-bookmark text-indigo-600"></i>
+                    <span>Preview Word Cards (Chapters 15–17)</span>
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4" id="preview-cards-grid">
+                    <!-- Dynamically generated preview cards -->
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Screenshare Helper Modal -->
+    <div id="screenshare-modal" class="fixed inset-0 bg-stone-950/70 backdrop-blur-xs flex items-center justify-center p-4 z-50 hidden">
+        <div class="bg-white rounded-2xl max-w-lg w-full p-6 space-y-4 shadow-2xl border border-stone-200">
+            <div class="flex items-center justify-between border-b border-stone-100 pb-3">
+                <div class="flex items-center gap-2">
+                    <div class="p-2 rounded-lg bg-amber-100 text-amber-800">
+                        <i class="fa-solid fa-desktop"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-stone-900 text-base">Teacher Screenshare Guide</h3>
+                </div>
+                <button onclick="closeScreenshareModal()" class="text-stone-400 hover:text-stone-600">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+            <p class="text-xs text-stone-600 leading-relaxed">
+                When discussing close reading questions in class, share your digital book or PDF reader and navigate to these key scene benchmarks:
+            </p>
+            <div class="bg-stone-50 p-3.5 rounded-xl border border-stone-200 text-xs space-y-2 font-mono">
+                <div class="flex justify-between items-center text-stone-800">
+                    <span class="font-semibold text-stone-900">Ch. 12 (Jem's Maturation & Changes):</span>
+                    <span class="text-amber-700 bg-amber-50 px-2 py-0.5 rounded border border-amber-200 font-bold">~Page 115</span>
+                </div>
+                <div class="flex justify-between items-center text-stone-800">
+                    <span class="font-semibold text-stone-900">Ch. 12 (First Purchase Church & Lula):</span>
+                    <span class="text-amber-700 bg-amber-50 px-2 py-0.5 rounded border border-amber-200 font-bold">~Pages 118–120</span>
+                </div>
+                <div class="flex justify-between items-center text-stone-800">
+                    <span class="font-semibold text-stone-900">Ch. 12 (Calpurnia's Double Life & Zeebo):</span>
+                    <span class="text-amber-700 bg-amber-50 px-2 py-0.5 rounded border border-amber-200 font-bold">~Pages 124–126</span>
+                </div>
+                <div class="flex justify-between items-center text-stone-800">
+                    <span class="font-semibold text-stone-900">Ch. 13 (Alexandra's Streaks & Caste System):</span>
+                    <span class="text-amber-700 bg-amber-50 px-2 py-0.5 rounded border border-amber-200 font-bold">~Pages 129–133</span>
+                </div>
+                <div class="flex justify-between items-center text-stone-800">
+                    <span class="font-semibold text-stone-900">Ch. 14 (Pink Penitentiary & Dill under Bed):</span>
+                    <span class="text-amber-700 bg-amber-50 px-2 py-0.5 rounded border border-amber-200 font-bold">~Pages 136–141</span>
+                </div>
+            </div>
+            <div class="flex justify-end pt-2">
+                <button onclick="closeScreenshareModal()" class="px-4 py-2 bg-stone-900 hover:bg-stone-800 text-white text-xs font-semibold rounded-xl">
+                    Got it, Back to Class
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification Toast -->
+    <div id="toast" class="fixed bottom-5 right-5 bg-stone-900 text-white px-4 py-3 rounded-xl shadow-2xl border border-stone-700 text-xs font-medium flex items-center space-x-2 translate-y-20 opacity-0 transition-all duration-300 z-50">
+        <i id="toast-icon" class="fa-solid fa-circle-check text-emerald-400"></i>
+        <span id="toast-message">Action successful!</span>
+    </div>
+
+    <!-- JavaScript Data & Logic -->
+    <script>
+        // Exact 12 Words from Chapters 12–14 Vocabulary List
+        const HOMEWORK_VOCAB = [
+            {
+                id: "v1",
+                word: "altercation",
+                pos: "noun",
+                def: "a heated quarrel or dispute",
+                sentence: "After one ________ when Jem hollered, 'It's time you started bein' a girl and acting right!' I burst into tears and fled to Calpurnia.",
+                chapter: "Chapter 12"
+            },
+            {
+                id: "v2",
+                word: "appalling",
+                pos: "adjective",
+                def: "shocking; dreadful",
+                sentence: "His appetite was ________, and he told me so many times to stop pestering him I consulted Atticus.",
+                chapter: "Chapter 12"
+            },
+            {
+                id: "v3",
+                word: "austere",
+                pos: "adjective",
+                def: "stern; severely simple",
+                sentence: "His sermon was a forthright denunciation of sin, an ________ declaration of the motto on the wall behind him.",
+                chapter: "Chapter 12"
+            },
+            {
+                id: "v4",
+                word: "haughty",
+                pos: "adjective",
+                def: "arrogant; disdainfully proud",
+                sentence: "'She's a troublemaker from way back, got fancy ideas an' ________ ways—we're mighty glad to have you all.'",
+                chapter: "Chapter 12"
+            },
+            {
+                id: "v5",
+                word: "frivolous",
+                pos: "adjective",
+                def: "silly; not serious; trivial",
+                sentence: "It showed Atticus barefooted and in short pants, chained to a desk: he was diligently writing on a slate while some ________-looking girls yelled, 'Yoo-hoo!' at him.",
+                chapter: "Chapter 12"
+            },
+            {
+                id: "v6",
+                word: "qualms",
+                pos: "noun",
+                def: "misgivings; feelings of doubt",
+                sentence: "I did likewise with no ________.",
+                chapter: "Chapter 12"
+            },
+            {
+                id: "v7",
+                word: "elusive",
+                pos: "adjective",
+                def: "hard to pin down or catch",
+                sentence: "Atticus paused, watching me locate an ________ redbug on my leg.",
+                chapter: "Chapter 13"
+            },
+            {
+                id: "v8",
+                word: "formidable",
+                pos: "adjective",
+                def: "awe-inspiring; intimidating in size or manner",
+                sentence: "From any angle, it was ________.",
+                chapter: "Chapter 13"
+            },
+            {
+                id: "v9",
+                word: "myopic",
+                pos: "adjective",
+                def: "narrow-minded; short-sighted",
+                sentence: "Maycomb grew and sprawled out from its hub, Sinkfield's Tavern, because Sinkfield reduced his guests to ________ drunkenness one evening.",
+                chapter: "Chapter 13"
+            },
+            {
+                id: "v10",
+                word: "fortitude",
+                pos: "noun",
+                def: "strength; courage in facing difficulty",
+                sentence: "He bore with ________ her 'Wait Till I Get You Home,' was quite calm during 'That's All the Harris in You Coming Out,' and returned the hug at long last bestowed upon him.",
+                chapter: "Chapter 14"
+            },
+            {
+                id: "v11",
+                word: "resilient",
+                pos: "adjective",
+                def: "flexible; able to recover shape or spring back",
+                sentence: "As I passed the bed I stepped on something warm, ________, and rather smooth.",
+                chapter: "Chapter 14"
+            },
+            {
+                id: "v12",
+                word: "reverent",
+                pos: "adjective",
+                def: "full of respect; showing deep reverence",
+                sentence: "'God Almighty.' Jem's voice was ________.",
+                chapter: "Chapter 14"
+            }
+        ];
+
+        // 9 Curated Close Reading Questions directly reflecting the Teacher Guide PDF
+        const CLOSE_READING_QUESTIONS = [
+            {
+                id: 1,
+                chapter: 12,
+                title: "Jem's Coming-of-Age and Changing Behavior",
+                question: "A major theme in the novel is the journey from innocence to maturity. How does Jem symbolize this theme in Chapter 12? What evidence indicates he is growing up?",
+                quote: "He was difficult to live with, inconsistent, moody. His appetite was appalling... 'It's time you started bein' a girl and acting right!'",
+                citation: "Ch. 12 Reference (Q1)",
+                literaryDevice: "Bildungsroman & Character Arc",
+                insight: "Jem exhibits classic physical and emotional signs of adolescence: a ravenous appetite, moodiness, and a demand for privacy. Crucially, he acquires an adult perspective—he reads the daily newspaper, understands political cartoons about Atticus in The Montgomery Advertiser, and attempts to impose his new adult values onto Scout, marking the widening developmental gap between them.",
+                userNote: ""
+            },
+            {
+                id: 2,
+                chapter: 12,
+                title: "First Purchase African M.E. Church & The Collection",
+                question: "What is the significance of the name of Calpurnia's church? How does the building and service differ from Scout and Jem's usual church, and why does Reverend Sykes lock the doors?",
+                quote: "First Purchase was paid for from the first earnings of freed slaves... 'Alec, shut the doors. Nobody leaves here, till we have ten dollars.'",
+                citation: "Ch. 12 Reference (Q4, Q5 & Q7)",
+                literaryDevice: "Historical Allusion & Community Solidarity",
+                insight: "First Purchase was built using the very first wages earned by newly emancipated African Americans, giving it immense historical dignity. Unlike white churches, it has unpainted walls, simple pine benches, no piano, organ, or printed hymnals. When the coffee can collection falls short, Reverend Sykes locks the church doors until ten dollars is collected to support Helen Robinson, whom white employers refuse to hire because of Bob Ewell's accusations against Tom.",
+                userNote: ""
+            },
+            {
+                id: 3,
+                chapter: 12,
+                title: "Racial Intolerance: The Incident with Lula",
+                question: "When Scout and Jem arrive at First Purchase, how do they experience racial intolerance first-hand? How is the confrontation resolved?",
+                quote: "You ain't got no business bringin' white chillun here—they got their church, we got our'n... In her place was a solid mass of colored people.",
+                citation: "Ch. 12 Reference (Q6)",
+                literaryDevice: "Situational Reversal & Social Protection",
+                insight: "A church member named Lula angrily challenges Calpurnia for bringing white children into a segregated Black space, causing Jem and Scout to feel the discomfort of being racial outsiders for the first time. However, the conflict is resolved when the rest of the congregation steps forward, warmly welcomes the children out of respect for Atticus's defense of Tom Robinson, and surrounds them, forcing Lula to leave.",
+                userNote: ""
+            },
+            {
+                id: 4,
+                chapter: 12,
+                title: "Zeboo's 'Linin'' & Calpurnia's 'Modest Double Life'",
+                question: "What is 'linin'' and why is it practiced at First Purchase? What does Scout realize about Calpurnia's identity and linguistic ability?",
+                quote: "That Calpurnia led a modest double life never dawned on me. The idea that she had a separate existence outside our household was a novel one, to say nothing of her having command of two languages.",
+                citation: "Ch. 12 Reference (Q10 & Q11)",
+                literaryDevice: "Linguistic Code-Switching & Humanization",
+                insight: "'Linin'' is the practice of having one leader chant each hymn line so the congregation can sing in response, necessary because only four church members (including Calpurnia and Zeebo) can read. Scout is stunned to discover Calpurnia's 'modest double life' and her command of two dialects. Scout recognizes for the first time that Calpurnia is an autonomous human being with her own rich culture and community outside the Finch household.",
+                userNote: ""
+            },
+            {
+                id: 5,
+                chapter: 13,
+                title: "Aunt Alexandra's Arrival & Her 'Streak' Theory",
+                question: "Why does Aunt Alexandra come to Maycomb? What is her theory regarding heredity and 'streaks,' and how does Jem expose its absurdity?",
+                quote: "Everybody in Maycomb, it seemed, had a Streak: a Drinking Streak, a Gambling Streak, a Mean Streak... 'That makes the Ewells fine folks, then.'",
+                citation: "Ch. 13 Reference (Q1 & Q2)",
+                literaryDevice: "Satire & Genetic Determinism",
+                insight: "Alexandra arrives to provide Scout with 'feminine influence' and assist Atticus as the trial approaches. She believes human behavior is dictated by inherited family 'streaks' and measures a family's worth by how long they have lived on one patch of land. Jem immediately dismantles her logic by retorting, 'That makes the Ewells fine folks, then,' since the disreputable Ewells have squatted near the town dump for generations.",
+                userNote: ""
+            },
+            {
+                id: 6,
+                chapter: 13,
+                title: "Maycomb's Caste System & Atticus's Uncharacteristic Speech",
+                question: "How does Scout explain Maycomb's 'caste system'? What happens when Atticus attempts to deliver Alexandra's speech about 'gentle breeding'?",
+                quote: "This was not my father. My father never thought these thoughts... 'I don't want you to remember it. Forget it.'",
+                citation: "Ch. 13 Reference (Q3, Q4 & Q5)",
+                literaryDevice: "Irony & Parental Integrity",
+                insight: "Maycomb operates under a rigid caste system where citizens are locked into generational stereotypes and social roles. Pressured by Alexandra, Atticus awkwardly tries to lecture the children about their aristocratic lineage and 'gentle breeding.' Scout bursts into tears because Atticus's stiff, unfamiliar tone alienates her. Realizing he is betraying his own egalitarian values to please his sister, Atticus abandons the lecture and commands the children to forget it.",
+                userNote: ""
+            },
+            {
+                id: 7,
+                chapter: 14,
+                title: "The 'Pink Cotton Penitentiary' & Atticus's Defense of Calpurnia",
+                question: "What does Scout mean by the metaphor of the 'pink cotton penitentiary'? When Alexandra demands Calpurnia be dismissed, how does Atticus respond?",
+                quote: "I felt the starched walls of a pink cotton penitentiary closing in on me... 'Alexandra, Calpurnia's not leaving this house until she wants to.'",
+                citation: "Ch. 14 Reference (Q3 & Q4)",
+                literaryDevice: "Extended Metaphor & Moral Loyalty",
+                insight: "The 'pink cotton penitentiary' is Scout's metaphor for the stifling domestic expectations and feminine dress codes Alexandra seeks to force upon her. When Alexandra urges Atticus to fire Calpurnia because she is now present, Atticus adamantly refuses. He emphasizes that Calpurnia is an irreplaceable, faithful member of their family whose discipline and love have raised Jem and Scout successfully.",
+                userNote: ""
+            },
+            {
+                id: 8,
+                chapter: 14,
+                title: "Dill Under the Bed & Jem Severing the Childhood Code",
+                question: "What do the children discover under Scout's bed? What does Jem do that shocks Scout and Dill, and how does this establish his maturity?",
+                quote: "Dill's eyes flickered at Jem, and Jem looked at the floor. Then he rose and broke the remaining code of our childhood... 'You can't run three hundred miles off without your mother knowin'.'",
+                citation: "Ch. 14 Reference (Q6 & Q7)",
+                literaryDevice: "Coming-of-Age Rite & Moral Dilemma",
+                insight: "They discover Dill hiding under the bed, having escaped Meridian. Scout expects Jem to maintain childhood conspiratorial silence, but Jem immediately calls Atticus. Although Scout views this as a traitorous betrayal of their childhood code, Jem's decision demonstrates true adult responsibility: he recognizes that Dill's mother must be frantic with worry and prioritizes Dill's safety over peer solidarity.",
+                userNote: ""
+            },
+            {
+                id: 9,
+                chapter: 14,
+                title: "Dill's Neglect & His Insight Regarding Boo Radley",
+                question: "Why did Dill run away from home? What poignant question does Scout ask at the end of Chapter 14, and what is Dill's revealing response?",
+                quote: "They just wasn't interested in me... 'Why do you reckon Boo Radley's never run off?' ... 'Maybe he doesn't have anywhere to run off to.'",
+                citation: "Ch. 14 Reference (Q8 & Q9)",
+                literaryDevice: "Juxtaposition & Motif of the Outsider",
+                insight: "Dill reveals that his mother and stepfather do not abuse him, but they emotionally neglect him, buying him presents to keep him out of sight while spending their time sequestered in other rooms. At bedtime, Scout asks why Boo Radley never ran away from his abusive father. Dill poignantly replies that Boo 'doesn't have anywhere to run off to,' illuminating that Boo's reclusion stems from profound isolation rather than monstrosity.",
+                userNote: ""
+            }
+        ];
+
+        // Literary Devices & Craft Analysis Data
+        const LITERARY_DEVICES = [
+            {
+                id: "ld1",
+                technique: "Linguistic Duality",
+                icon: "fa-comments",
+                title: "Code-Switching & Cultural Survival",
+                description: "In Chapter 12, Calpurnia effortlessly switches between formal English in the Finch home and African American Vernacular English at First Purchase. Lee uses this code-switching to illustrate how marginalized groups navigate dual cultural realities with dignity, teaching Scout that language is socially contextual.",
+                quote: "\"That Calpurnia led a modest double life never dawned on me... to say nothing of her having command of two languages.\""
+            },
+            {
+                id: "ld2",
+                technique: "Extended Metaphor",
+                icon: "fa-person-dress",
+                title: "The 'Pink Cotton Penitentiary'",
+                description: "Scout conceptualizes Southern ladyhood not as a privilege, but as an institutional prison. The starched ruffles and corseted ideals advocated by Aunt Alexandra represent social confinement and the erasure of Scout's vibrant, tomboyish independence.",
+                quote: "\"I felt the starched walls of a pink cotton penitentiary closing in on me...\""
+            },
+            {
+                id: "ld3",
+                technique: "Moral Rite of Passage",
+                icon: "fa-stairs",
+                title: "Breaking the Childhood Code",
+                description: "When Jem informs Atticus that Dill has run away, he crosses an irreversible boundary. He breaks the tribal childhood code of keeping secrets from adults in order to fulfill a higher moral obligation: protecting Dill and relieving a mother's frantic worry.",
+                quote: "\"Then he rose and broke the remaining code of our childhood... 'You can't run three hundred miles off without your mother knowin'.\""
+            },
+            {
+                id: "ld4",
+                technique: "Satire & Irony",
+                icon: "fa-scale-unbalanced",
+                title: "Aunt Alexandra's Hereditary Determinism",
+                description: "Lee satirizes the Southern obsession with ancestry through Aunt Alexandra's absurd theory that families possess inherent 'streaks' and that moral quality is tied to land longevity. Jem quickly exposes the hypocrisy by noting the Ewells would qualify as Maycomb's finest citizens.",
+                quote: "\"...the longer a family had been squatting on one patch of land the finer it was. 'That makes the Ewells fine folks, then,' said Jem.\""
+            },
+            {
+                id: "ld5",
+                technique: "Thematic Motif",
+                icon: "fa-house-user",
+                title: "The Neglected Outsider (Dill & Boo)",
+                description: "Lee connects Dill's emotional abandonment by his self-absorbed parents with Boo Radley's physical imprisonment. Dill's realization that Boo never ran away because he 'doesn't have anywhere to run off to' deepens the novel's exploration of loneliness and belonging.",
+                quote: "\"Why do you reckon Boo Radley's never run off?\" Dill's answer: \"Maybe he doesn't have anywhere to run off to.\""
+            }
+        ];
+
+        // Exact 12 Preview Words from Chapters 15–17 Uploaded Sheet
+        const PREVIEW_VOCAB = [
+            {
+                word: "acquiescence",
+                pos: "noun",
+                def: "reluctant agreement; compliance",
+                sentence: "We were accustomed to prompt, if not always cheerful ________ to Atticus's instructions, but from the way he stood Jem was not thinking of budging.",
+                chapter: "Chapter 15"
+            },
+            {
+                word: "futility",
+                pos: "noun",
+                def: "uselessness; hopelessness",
+                sentence: "I began to sense the ________ one feels when unacknowledged by a chance acquaintance.",
+                chapter: "Chapter 15"
+            },
+            {
+                word: "ominous",
+                pos: "adjective",
+                def: "menacing; threatening",
+                sentence: "There was a murmur among the group of men, made more ________ when Atticus moved back to the bottom front step and the men drew nearer to him.",
+                chapter: "Chapter 15"
+            },
+            {
+                word: "succinct",
+                pos: "adjective",
+                def: "brief and clearly expressed; to the point",
+                sentence: "'Called 'em off on a snipe hunt,' was the ________ answer.",
+                chapter: "Chapter 15"
+            },
+            {
+                word: "countenance",
+                pos: "noun",
+                def: "the appearance of one's face; facial expression",
+                sentence: "Miss Maudie answered: 'A merry heart maketh a cheerful ________!'",
+                chapter: "Chapter 16"
+            },
+            {
+                word: "eccentricities",
+                pos: "noun",
+                def: "odd traits or behaviors",
+                sentence: "After nine hours of listening to the ________ of Old Sarum's inhabitants, Judge Taylor threw the case out of court.",
+                chapter: "Chapter 16"
+            },
+            {
+                word: "elucidate",
+                pos: "verb",
+                def: "to clarify; explain in detail",
+                sentence: "We asked Miss Maudie to ________: she said Miss Stephanie seemed to know so much about the case she might as well be called on to testify.",
+                chapter: "Chapter 16"
+            },
+            {
+                word: "reminiscent",
+                pos: "adjective",
+                def: "reminding one of something else; evocative",
+                sentence: "The Maycomb County courthouse was faintly ________ of Arlington in one respect: the concrete pillars supporting its south roof were too heavy for their light burden.",
+                chapter: "Chapter 16"
+            },
+            {
+                word: "acrimonious",
+                pos: "adjective",
+                def: "angry and bitter; hostile",
+                sentence: "We could tell, however, when debate became more ________ than professional, but this was from watching lawyers other than our father.",
+                chapter: "Chapter 17"
+            },
+            {
+                word: "congenital",
+                pos: "adjective",
+                def: "present from birth; inborn",
+                sentence: "No public health officer could free them from ________ defects, various worms, and the diseases indigenous to filthy surroundings.",
+                chapter: "Chapter 17"
+            },
+            {
+                word: "corroborating",
+                pos: "verb (gerund)",
+                def: "confirming; supporting with evidence",
+                sentence: "He said something about ________ evidence, which made me sure he was showing off.",
+                chapter: "Chapter 17"
+            },
+            {
+                word: "tenet",
+                pos: "noun",
+                def: "a principle or belief held to be true",
+                sentence: "Never, never, never, on cross-examination ask a witness a question you don't already know the answer to, was a ________ I absorbed with my baby-food.",
+                chapter: "Chapter 17"
+            }
+        ];
+
+        // State Tracking
+        let sentenceState = [];
+        let sentenceScore = 0;
+        let currentCrFilter = 'all';
+
+        // Initialize App
+        window.addEventListener('DOMContentLoaded', () => {
+            initSentenceState();
+            renderAllSentenceCards();
+            renderCloseReadingCards();
+            renderLiteraryDevices();
+            renderPreviewCards();
+            initPreviewChallenge();
+
+            // Load saved discussion scratchpad
+            const savedScratchpad = localStorage.getItem('tkam_scratchpad_notes_ch12_14');
+            if (savedScratchpad) {
+                const pad = document.getElementById('discussion-scratchpad');
+                if (pad) {
+                    pad.value = savedScratchpad;
+                    updateScratchpadCount(savedScratchpad);
+                }
+            }
+        });
+
+        // Tab Navigation
+        function switchMainTab(tabKey) {
+            document.querySelectorAll('.tab-panel').forEach(p => p.classList.add('hidden'));
+            document.querySelectorAll('.tab-nav-btn').forEach(b => {
+                b.classList.remove('bg-amber-600', 'text-white', 'shadow-sm');
+                b.classList.add('text-stone-600', 'hover:text-stone-900', 'hover:bg-stone-300/60');
+            });
+
+            const targetPanel = document.getElementById(`tab-panel-${tabKey}`);
+            const targetBtn = document.getElementById(`tab-nav-${tabKey}`);
+
+            if (targetPanel) targetPanel.classList.remove('hidden');
+            if (targetBtn) {
+                targetBtn.classList.add('bg-amber-600', 'text-white', 'shadow-sm');
+                targetBtn.classList.remove('text-stone-600', 'hover:text-stone-900', 'hover:bg-stone-300/60');
+            }
+        }
+
+        // ==================== SENTENCE CHALLENGE ENGINE ====================
+        function initSentenceState() {
+            sentenceState = HOMEWORK_VOCAB.map((item) => {
+                const distractors = HOMEWORK_VOCAB
+                    .filter(v => v.id !== item.id)
+                    .map(v => v.word)
+                    .sort(() => 0.5 - Math.random())
+                    .slice(0, 3);
+
+                const options = [
+                    { word: item.word, isCorrect: true },
+                    ...distractors.map(w => ({ word: w, isCorrect: false }))
+                ].sort(() => 0.5 - Math.random());
+
+                return {
+                    ...item,
+                    options: options,
+                    answered: false,
+                    selectedWord: null,
+                    isCorrect: false
+                };
+            });
+            sentenceScore = 0;
+            updateSentenceScores();
+        }
+
+        function resetSentenceChallenge() {
+            initSentenceState();
+            renderAllSentenceCards();
+            showToast("Sentence Challenge Reset!");
+        }
+
+        function renderAllSentenceCards() {
+            const container = document.getElementById('sentence-cards-container');
+            if (!container) return;
+
+            container.innerHTML = sentenceState.map((q, idx) => {
+                const maskedSentence = q.sentence.replace('________', '<span class="underline decoration-amber-500 decoration-2 font-mono font-bold text-amber-700 bg-amber-50 px-2 py-0.5 rounded border border-amber-200">________</span>');
+
+                return `
+                    <div class="bg-white rounded-2xl p-6 border border-stone-200 shadow-sm space-y-4 hover:border-stone-300 transition" id="sent-card-${idx}">
+                        <!-- Top Metadata & Audio Pronunciation -->
+                        <div class="flex items-center justify-between border-b border-stone-100 pb-3">
+                            <div class="flex items-center gap-2">
+                                <span class="px-2.5 py-1 rounded-full bg-stone-900 text-amber-300 text-xs font-bold font-mono">
+                                    Sentence ${idx + 1} of ${sentenceState.length}
+                                </span>
+                                <span class="text-xs font-semibold px-2 py-0.5 rounded bg-amber-50 text-amber-800 border border-amber-200">
+                                    ${q.chapter}
+                                </span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <button onclick="speakWord('${q.word}')" title="Pronounce word" class="text-stone-400 hover:text-amber-600 text-xs flex items-center gap-1 px-2 py-1 rounded hover:bg-stone-50 transition">
+                                    <i class="fa-solid fa-volume-high"></i>
+                                    <span class="hidden sm:inline font-sans text-[11px]">Audio</span>
+                                </button>
+                                <span class="text-xs text-stone-500 italic">
+                                    Clue: <strong class="text-stone-800 font-semibold">${q.def}</strong> (${q.pos})
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Novel Context Sentence -->
+                        <div class="bg-stone-50/70 p-4 rounded-xl border-l-4 border-amber-500 border-y border-r border-stone-200/60 shadow-xs">
+                            <p class="font-serif italic text-base sm:text-lg text-stone-900 leading-relaxed">
+                                "${maskedSentence}"
+                            </p>
+                        </div>
+
+                        <!-- 4 Choices Grid -->
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 pt-1">
+                            ${q.options.map((opt) => `
+                                <button id="opt-btn-${idx}-${opt.word}" 
+                                        onclick="selectSentenceOption(${idx}, '${opt.word}', ${opt.isCorrect})"
+                                        ${q.answered ? 'disabled' : ''}
+                                        class="sent-btn-${idx} px-3.5 py-3 rounded-xl border border-stone-200 bg-white hover:bg-stone-50 font-serif font-bold text-xs sm:text-sm text-stone-800 transition shadow-xs text-center ${q.answered ? 'cursor-default' : ''}">
+                                    ${opt.word}
+                                </button>
+                            `).join('')}
+                        </div>
+
+                        <!-- Feedback Box -->
+                        <div id="sent-feedback-${idx}" class="${q.answered ? '' : 'hidden'} text-xs font-medium p-3 rounded-xl transition-all">
+                            ${q.answered ? (
+                                q.isCorrect 
+                                    ? `<div class="p-3 bg-emerald-50 text-emerald-900 border border-emerald-200 rounded-xl flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-600"></i> Correct! <strong>${q.word}</strong> (${q.pos}) means "${q.def}".</div>`
+                                    : `<div class="p-3 bg-rose-50 text-rose-900 border border-rose-200 rounded-xl flex items-center gap-2"><i class="fa-solid fa-circle-xmark text-rose-600"></i> Incorrect. The correct word is <strong>${q.word}</strong>: "${q.def}".</div>`
+                            ) : ''}
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function selectSentenceOption(qIdx, chosenWord, isCorrect) {
+            const q = sentenceState[qIdx];
+            if (!q || q.answered) return;
+
+            q.answered = true;
+            q.selectedWord = chosenWord;
+            q.isCorrect = isCorrect;
+
+            if (isCorrect) {
+                sentenceScore++;
+                showToast(`Sentence ${qIdx + 1}: Correct!`);
+            } else {
+                showToast(`Sentence ${qIdx + 1}: Incorrect`, true);
+            }
+
+            // Disable buttons for this question
+            const allBtns = document.querySelectorAll(`.sent-btn-${qIdx}`);
+            allBtns.forEach(btn => {
+                btn.disabled = true;
+                btn.classList.add('cursor-default');
+            });
+
+            const clickedBtn = document.getElementById(`opt-btn-${qIdx}-${chosenWord}`);
+            if (clickedBtn) {
+                if (isCorrect) {
+                    clickedBtn.classList.remove('bg-white', 'border-stone-200');
+                    clickedBtn.classList.add('bg-emerald-50', 'border-emerald-500', 'text-emerald-900', 'ring-2', 'ring-emerald-400');
+                } else {
+                    clickedBtn.classList.remove('bg-white', 'border-stone-200');
+                    clickedBtn.classList.add('bg-rose-50', 'border-rose-400', 'text-rose-900');
+                }
+            }
+
+            // Highlight the correct option if the user chose incorrectly
+            if (!isCorrect) {
+                const correctBtn = document.getElementById(`opt-btn-${qIdx}-${q.word}`);
+                if (correctBtn) {
+                    correctBtn.classList.add('bg-emerald-50', 'border-emerald-500', 'text-emerald-900');
+                }
+            }
+
+            // Render feedback
+            const fb = document.getElementById(`sent-feedback-${qIdx}`);
+            if (fb) {
+                fb.classList.remove('hidden');
+                fb.innerHTML = isCorrect 
+                    ? `<div class="p-3 bg-emerald-50 text-emerald-900 border border-emerald-200 rounded-xl flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-600"></i> Correct! <strong>${q.word}</strong> (${q.pos}) means "${q.def}".</div>`
+                    : `<div class="p-3 bg-rose-50 text-rose-900 border border-rose-200 rounded-xl flex items-center gap-2"><i class="fa-solid fa-circle-xmark text-rose-600"></i> Incorrect. The correct word is <strong>${q.word}</strong>: "${q.def}".</div>`;
+            }
+
+            updateSentenceScores();
+        }
+
+        function updateSentenceScores() {
+            const answeredCount = sentenceState.filter(q => q.answered).length;
+            const progressDisplay = document.getElementById('fillin-progress-display');
+            const scoreDisplay = document.getElementById('fillin-score-display');
+
+            if (progressDisplay) progressDisplay.textContent = `${answeredCount} / ${sentenceState.length}`;
+            if (scoreDisplay) scoreDisplay.textContent = `${sentenceScore} / ${sentenceState.length}`;
+        }
+
+        function speakWord(text) {
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+                const u = new SpeechSynthesisUtterance(text);
+                u.rate = 0.85;
+                window.speechSynthesis.speak(u);
+            }
+        }
+
+        // ==================== CLOSE READING ====================
+        function filterCloseReading(filter) {
+            currentCrFilter = filter;
+            ['all', 12, 13, 14].forEach(k => {
+                const btn = document.getElementById(`cr-filter-btn-${k}`);
+                if (btn) {
+                    btn.className = (k === filter)
+                        ? "px-3 py-1.5 text-xs font-semibold rounded-lg bg-amber-600 text-white transition"
+                        : "px-3 py-1.5 text-xs font-semibold rounded-lg text-stone-300 hover:text-white hover:bg-stone-800 transition";
+                }
+            });
+            renderCloseReadingCards();
+        }
+
+        function renderCloseReadingCards() {
+            const container = document.getElementById('close-reading-cards-list');
+            if (!container) return;
+
+            const filtered = currentCrFilter === 'all'
+                ? CLOSE_READING_QUESTIONS
+                : CLOSE_READING_QUESTIONS.filter(q => q.chapter === currentCrFilter);
+
+            container.innerHTML = filtered.map(q => {
+                const savedNote = localStorage.getItem(`tkam_cr_note_ch12_14_${q.id}`) || q.userNote;
+
+                return `
+                    <div class="bg-white rounded-2xl p-6 border border-stone-200 shadow-sm space-y-4 hover:shadow-md transition">
+                        <!-- Top Metadata -->
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-stone-100 pb-3">
+                            <div class="flex flex-wrap items-center gap-2">
+                                <span class="px-2.5 py-0.5 rounded-full text-xs font-bold uppercase tracking-wider bg-stone-900 text-amber-300 font-mono">
+                                    Chapter ${q.chapter}
+                                </span>
+                                <span class="text-xs px-2.5 py-0.5 rounded-full bg-amber-50 text-amber-800 font-semibold border border-amber-200">
+                                    ${q.literaryDevice}
+                                </span>
+                                <span class="px-2.5 py-0.5 rounded-full text-[11px] font-mono font-semibold bg-stone-100 text-stone-700 border border-stone-200 flex items-center gap-1">
+                                    <i class="fa-solid fa-bookmark text-amber-700 text-[10px]"></i> ${q.citation}
+                                </span>
+                            </div>
+                            <h4 class="font-serif font-bold text-stone-800 text-sm sm:text-base">${q.title}</h4>
+                        </div>
+
+                        <!-- Question & Novel Quote -->
+                        <div>
+                            <p class="font-serif font-bold text-stone-900 text-base sm:text-lg leading-snug">${q.question}</p>
+                            ${q.quote ? `
+                                <div class="mt-3 p-3.5 rounded-xl bg-amber-50/50 border-l-4 border-amber-500 text-xs sm:text-sm font-serif italic text-stone-700">
+                                    "${q.quote}"
+                                </div>
+                            ` : ''}
+                        </div>
+
+                        <!-- Auto-saving Note area -->
+                        <div class="space-y-1.5 pt-1">
+                            <div class="flex justify-between items-center text-xs text-stone-600 font-medium">
+                                <span><i class="fa-solid fa-pen-nib text-amber-600 mr-1"></i> Student Analysis Notes:</span>
+                                <span class="text-[10px] text-stone-400">Auto-saves locally</span>
+                            </div>
+                            <textarea oninput="saveCrNote(${q.id}, this.value)" class="w-full p-3 text-xs bg-stone-50 border border-stone-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-amber-500 focus:outline-none transition font-sans text-stone-800" rows="3" placeholder="Jot classroom discussion findings, textual citations, or observations here...">${savedNote || ''}</textarea>
+                        </div>
+
+                        <!-- Instructor Revealable Key Insight -->
+                        <div class="pt-2 border-t border-stone-100 flex flex-col gap-2">
+                            <button onclick="toggleCrInsight(${q.id})" class="text-xs font-semibold text-amber-800 hover:text-amber-900 flex items-center gap-1.5 self-start transition">
+                                <i class="fa-solid fa-key text-amber-600"></i>
+                                <span id="cr-insight-btn-label-${q.id}">Show Teacher Key Insights & Reference Answer</span>
+                                <i id="cr-insight-icon-${q.id}" class="fa-solid fa-chevron-down text-[10px]"></i>
+                            </button>
+
+                            <div id="cr-insight-box-${q.id}" class="hidden p-4 rounded-xl bg-stone-900 text-stone-200 text-xs leading-relaxed space-y-1 mt-1 border border-stone-800">
+                                <span class="font-bold text-amber-400 block uppercase tracking-wider text-[10px]">Teaching Unit Solution:</span>
+                                <p class="text-stone-300 font-sans leading-normal">${q.insight}</p>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function saveCrNote(id, val) {
+            localStorage.setItem(`tkam_cr_note_ch12_14_${id}`, val);
+        }
+
+        function toggleCrInsight(id) {
+            const box = document.getElementById(`cr-insight-box-${id}`);
+            const label = document.getElementById(`cr-insight-btn-label-${id}`);
+            const icon = document.getElementById(`cr-insight-icon-${id}`);
+
+            if (box.classList.contains('hidden')) {
+                box.classList.remove('hidden');
+                label.textContent = "Hide Teacher Insights";
+                icon.className = "fa-solid fa-chevron-up text-[10px]";
+            } else {
+                box.classList.add('hidden');
+                label.textContent = "Show Teacher Key Insights & Reference Answer";
+                icon.className = "fa-solid fa-chevron-down text-[10px]";
+            }
+        }
+
+        // ==================== LITERARY DEVICES & CRAFT ====================
+        function renderLiteraryDevices() {
+            const container = document.getElementById('literary-devices-grid');
+            if (!container) return;
+
+            container.innerHTML = LITERARY_DEVICES.map(m => `
+                <div class="bg-white rounded-2xl p-6 border border-stone-200 shadow-sm space-y-4 hover:shadow-md transition flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-700 flex items-center justify-center border border-indigo-100">
+                                <i class="fa-solid ${m.icon} text-lg"></i>
+                            </div>
+                            <div>
+                                <span class="text-[10px] font-bold text-amber-800 bg-amber-100 px-2.5 py-0.5 rounded-full uppercase tracking-wider border border-amber-200 font-mono">${m.technique}</span>
+                                <h3 class="font-serif font-bold text-stone-900 text-base mt-1">${m.title}</h3>
+                            </div>
+                        </div>
+                        <p class="text-xs text-stone-600 leading-relaxed font-sans">${m.description}</p>
+                    </div>
+                    <div class="p-3 bg-stone-50 rounded-xl border-l-4 border-indigo-500 text-xs font-serif italic text-stone-700 mt-2">
+                        ${m.quote}
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // ==================== WRITING PROMPT & SCRATCHPAD ====================
+        function saveScratchpad(val) {
+            localStorage.setItem('tkam_scratchpad_notes_ch12_14', val);
+            updateScratchpadCount(val);
+        }
+
+        function updateScratchpadCount(val) {
+            const words = val.trim().split(/\s+/).filter(w => w.length > 0);
+            const countEl = document.getElementById('scratchpad-count');
+            if (countEl) countEl.textContent = `${words.length} words`;
+        }
+
+        function toggleModelResponse() {
+            const box = document.getElementById('model-response-box');
+            const label = document.getElementById('model-btn-label');
+            if (box.classList.contains('hidden')) {
+                box.classList.remove('hidden');
+                label.textContent = "Hide Model Response";
+            } else {
+                box.classList.add('hidden');
+                label.textContent = "Show High-Scoring Model Paragraph";
+            }
+        }
+
+        // ==================== PREVIEW TAB ====================
+        function renderPreviewCards() {
+            const grid = document.getElementById('preview-cards-grid');
+            if (!grid) return;
+
+            grid.innerHTML = PREVIEW_VOCAB.map(item => `
+                <div class="bg-white p-5 rounded-2xl border border-stone-200 shadow-sm hover:shadow-md transition space-y-3 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between">
+                            <h4 class="font-serif font-bold text-stone-900 text-base">${item.word}</h4>
+                            <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-indigo-50 text-indigo-700 border border-indigo-100">${item.pos}</span>
+                        </div>
+                        <p class="text-xs text-stone-700 mt-2 font-medium leading-relaxed">${item.def}</p>
+                    </div>
+                    <div class="bg-indigo-50/50 p-2.5 rounded-xl border border-indigo-100/60 mt-2">
+                        <span class="text-[10px] font-bold text-indigo-700 uppercase tracking-wider block mb-0.5">Novel Context:</span>
+                        <p class="text-xs font-serif italic text-stone-600">"${item.sentence}"</p>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        let previewClueIdx = 0;
+        function initPreviewChallenge() {
+            renderPreviewClue();
+        }
+
+        function renderPreviewClue() {
+            const box = document.getElementById('preview-clues-box');
+            if (!box) return;
+
+            const target = PREVIEW_VOCAB[previewClueIdx];
+            if (!target) return;
+
+            box.innerHTML = `
+                <div class="flex items-center justify-between border-b border-stone-200 pb-2">
+                    <span class="text-xs font-bold text-stone-600">Challenge ${previewClueIdx + 1} of ${PREVIEW_VOCAB.length}</span>
+                    <button onclick="nextPreviewClue()" class="text-xs text-indigo-600 hover:text-indigo-800 font-semibold flex items-center gap-1">
+                        <span>Next Excerpt</span> <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+                <p class="font-serif text-stone-900 italic text-sm sm:text-base leading-relaxed py-1">
+                    "${target.sentence.replace('________', '<span class=\"font-mono font-bold text-indigo-600 underline\">________</span>')}"
+                </p>
+                <div id="clue-reveal-box" class="hidden bg-stone-900 text-stone-100 p-3.5 rounded-xl text-xs space-y-1">
+                    <span class="font-bold text-amber-400 uppercase text-[10px] block">Target Word: ${target.word} (${target.pos})</span>
+                    <p class="text-stone-300"><strong>Definition:</strong> ${target.def}</p>
+                </div>
+                <button onclick="toggleClueReveal()" id="clue-reveal-btn" class="px-3.5 py-1.5 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-xs rounded-lg transition">
+                    Reveal Missing Word
+                </button>
+            `;
+        }
+
+        function toggleClueReveal() {
+            const box = document.getElementById('clue-reveal-box');
+            const btn = document.getElementById('clue-reveal-btn');
+            if (box.classList.contains('hidden')) {
+                box.classList.remove('hidden');
+                btn.textContent = "Hide Answer";
+            } else {
+                box.classList.add('hidden');
+                btn.textContent = "Reveal Missing Word";
+            }
+        }
+
+        function nextPreviewClue() {
+            previewClueIdx = (previewClueIdx + 1) % PREVIEW_VOCAB.length;
+            renderPreviewClue();
+        }
+
+        // Screenshare Modal
+        function openScreenshareModal() {
+            const modal = document.getElementById('screenshare-modal');
+            if (modal) modal.classList.remove('hidden');
+        }
+
+        function closeScreenshareModal() {
+            const modal = document.getElementById('screenshare-modal');
+            if (modal) modal.classList.add('hidden');
+        }
+
+        // Toast Helper
+        function showToast(msg, isError = false) {
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toast-message');
+            const toastIcon = document.getElementById('toast-icon');
+
+            if (!toast || !toastMsg || !toastIcon) return;
+
+            toastMsg.textContent = msg;
+            toastIcon.className = isError 
+                ? "fa-solid fa-circle-exclamation text-rose-400" 
+                : "fa-solid fa-circle-check text-emerald-400";
+
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            setTimeout(() => {
+                toast.classList.add('translate-y-20', 'opacity-0');
+            }, 2600);
+        }
+    </script>
+</body>
+</html>
